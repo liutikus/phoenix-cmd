@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "team_members",
+  "info": {
+    "singularName": "team-member",
+    "pluralName": "team-members",
+    "displayName": "Team Member"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Role": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
