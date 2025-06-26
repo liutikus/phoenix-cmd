@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "team_members",
+  "collectionName": "ambasadors",
   "info": {
-    "singularName": "team-member",
-    "pluralName": "team-members",
-    "displayName": "Team Member"
+    "singularName": "ambasador",
+    "pluralName": "ambasadors",
+    "displayName": "Ambasador"
   },
   "options": {
     "draftAndPublish": true
@@ -15,18 +15,6 @@
     }
   },
   "attributes": {
-    "Image": {
-      "type": "media",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "multiple": false,
-      "allowedTypes": [
-        "images"
-      ]
-    },
     "Name": {
       "type": "string",
       "pluginOptions": {
@@ -44,6 +32,20 @@
         }
       },
       "required": true
+    },
+    "Image": {
+      "type": "media",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
     }
   }
 }

@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_project_results",
+  "info": {
+    "displayName": "results"
+  },
+  "options": {},
+  "attributes": {
+    "description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

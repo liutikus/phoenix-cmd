@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_news_descriptions",
+  "info": {
+    "displayName": "description"
+  },
+  "options": {},
+  "attributes": {
+    "description": {
+      "type": "text",
+      "required": true
+    }
+  },
+  "config": {}
+}
