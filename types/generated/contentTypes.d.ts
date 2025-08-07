@@ -462,43 +462,6 @@ export interface ApiAmbasadorAmbasador extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface ApiDonationDonation extends Struct.CollectionTypeSchema {
-  collectionName: 'donations';
-  info: {
-    displayName: 'Donation';
-    pluralName: 'donations';
-    singularName: 'donation';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    agreeTerms: Schema.Attribute.Boolean &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<false>;
-    amount: Schema.Attribute.String & Schema.Attribute.Required;
-    city: Schema.Attribute.String & Schema.Attribute.Required;
-    country: Schema.Attribute.String & Schema.Attribute.Required;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    email: Schema.Attribute.String & Schema.Attribute.Required;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::donation.donation'
-    > &
-      Schema.Attribute.Private;
-    name: Schema.Attribute.String & Schema.Attribute.Required;
-    paymentMethod: Schema.Attribute.String & Schema.Attribute.Required;
-    phoneNumber: Schema.Attribute.String & Schema.Attribute.Required;
-    publishedAt: Schema.Attribute.DateTime;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
 export interface ApiNewNew extends Struct.CollectionTypeSchema {
   collectionName: 'news';
   info: {
@@ -1262,7 +1225,6 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::ambasador.ambasador': ApiAmbasadorAmbasador;
-      'api::donation.donation': ApiDonationDonation;
       'api::new.new': ApiNewNew;
       'api::project.project': ApiProjectProject;
       'api::sponsor.sponsor': ApiSponsorSponsor;
